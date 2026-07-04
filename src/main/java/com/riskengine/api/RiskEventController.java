@@ -55,4 +55,9 @@ public class RiskEventController {
     public HttpResponse<List<RiskResult>> findByCustomerId(String customerId) {
         return HttpResponse.ok(getRiskEventUseCase.findByCustomerId(customerId));
     }
+
+    @Get("/health")
+    public HttpResponse<String> health() {
+        return HttpResponse.ok("OK");
+    }
 }

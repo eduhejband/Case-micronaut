@@ -75,18 +75,6 @@ micronaut {
 
 }
 
-tasks.named<io.micronaut.gradle.docker.MicronautDockerfile>("dockerfile") {
-
-    baseImage = "eclipse-temurin:25-jre"
-}
-
-
-
-
-
-
-
-// https://docs.gradle.org/current/userguide/upgrading_major_version_9.html#test_task_fails_when_no_tests_are_discovered
 tasks.withType<AbstractTestTask>().configureEach {
     failOnNoDiscoveredTests = false
 }
